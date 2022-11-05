@@ -15,19 +15,28 @@ for(let i = 0;i < rows.length;i++){
 
 //disappear----task---
 
-
+let more_than_10=document.getElementById("morethanten")
 let user_value=document.getElementById("usernumber-value")
 let numbers_list=document.getElementById("numbers-list")
 let numbers = [1,2,3,4,5,6,7,8,9,10]
+let checkEl=document.getElementById("check-el")
+numbers_list.innerText=numbers
 
-let index_no=user_value.value
-
-
-function disappear(index_no){
-    var t1=numbers.splice(index_no,1);
-    numbers_list.innerText=t1 // displaying the array elements
+function remove() {
+for(let k = 0;k < numbers.length;k++){
+    numbers[k]
+ if(user_value.value == numbers[k]){
+  
+    numbers.splice(user_value.value-1,1)
+     numbers_list.innerText = numbers
+    return numbers}
+    else if (user_value.value > 10){
+        more_than_10.innerText = user_value.value
     }
+      
+ }
     
+}
 
 
 
